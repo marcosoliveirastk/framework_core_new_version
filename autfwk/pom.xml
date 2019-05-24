@@ -18,4 +18,8 @@
       </plugin>
     </plugins>
   </build>
+  <scm>
+  	<url>https://github.com/marcosoliveirastk/framework_core_new_version.git</url>
+  	<connection>fwk_repositore</connection>
+  </scm>
 </project>
