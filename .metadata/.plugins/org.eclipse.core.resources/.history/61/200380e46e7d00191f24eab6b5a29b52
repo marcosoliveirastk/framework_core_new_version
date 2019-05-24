@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package br.fwk.db.connector.sgdb;
+
+/**
+ * @author marcos.oliveira
+ *
+ */
+public class AUTDBConMySql {
+	
+	@AUTAnnotations.PRIORITY_TO_PROCESS(PRIORITY = PRIORITY_EXECUTION_FROM_TESTS.PRIORITY_1)
+	@AUTAnnotations.TYPE_MEMBER(MEMBER = TYPE_MEMBER_FROM_CODE.VARIABLE_FRAMEWORK)
+	private String valorUpload = "VALOR PARA UPLOAD DE DADOS - SINCRONIZAÇÃO NO SERVIDOR";
+	
+	
+	@AUTAnnotations.INIT_CLASS_ATTRIBUTE
+	public void init() {
+		
+	}
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

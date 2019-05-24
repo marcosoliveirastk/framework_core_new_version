@@ -1,0 +1,26 @@
+/**
+ * 
+ */
+package br.fwk;
+
+import br.fwk.db.connector.sgdb.AUTDBConMySql;
+
+/**
+ * 
+ * @author marcos.oliveira
+ *
+ */
+public class AUTFramework {
+
+	/**
+	 * 
+	 * @param args
+	 * 
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("AUT INIT : PROCESS EXECUTION");
+		System.out.println(AUTDBConMySql.class);
+	}
+
+}

@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package java.lang;
+
+/**
+ * @author marcos.oliveira
+ *
+ */
+public @interface AUTAnnotations {
+	/**
+	 * 
+	 * Membro para inicialização de parametros da classe local
+	 * 
+	 * @author marcos.oliveira
+	 *
+	 */
+	public static @interface INIT_CLASS{};
+}

@@ -1,0 +1,42 @@
+/**
+ * 
+ */
+package java.lang;
+
+/**
+ * @author marcos.oliveira
+ *
+ */
+public @interface AUTAnnotations {
+	
+	/**
+	 * Tipo de objeto
+	 * 
+	 * @author marcos.oliveira
+	 *
+	 */
+	public static enum TYPE_MEMBER_FROM_CODE{
+		METHOD_TO_TEST,
+		METHOD_TO_SCENARIO,
+		METHOD_TO_COMPONENT,
+		METHOD,
+		VARIABLE,
+		CLASS,
+		BUSINESS_CLASS,
+		BUSINESS_OBJECT,
+		BUSINESS_PARAMS
+	}
+	
+	/**
+	 * 
+	 * Membro para inicialização de parametros da classe local
+	 * 
+	 * @author marcos.oliveira
+	 *
+	 */
+	public static @interface INIT_CLASS{};
+	
+	public static @interface TYPE_MEMBER{
+		TYPE_MEMBER_FROM_CODE MEMBER();
+	}
+}

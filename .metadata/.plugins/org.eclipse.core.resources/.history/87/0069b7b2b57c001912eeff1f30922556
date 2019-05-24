@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package java.lang;
+
+/**
+ * @author marcos.oliveira
+ *
+ */
+public interface AUTAnnotations {
+
+}

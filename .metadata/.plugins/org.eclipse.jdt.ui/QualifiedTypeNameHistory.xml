@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="br.fwk.db.connector.AUTConnections"/>
+<fullyQualifiedTypeName name="br.fwk.db.connector.AUTFilesConnections"/>
+<fullyQualifiedTypeName name="br.fwk.db.connector.AUTSGDBConnections"/>
+<fullyQualifiedTypeName name="java.lang.AUTAnnotations"/>
+<fullyQualifiedTypeName name="java.lang.AUTAnnotations.INIT_CLASS"/>
+<fullyQualifiedTypeName name="java.lang.AUTAnnotations.TYPE_MEMBER"/>
+<fullyQualifiedTypeName name="java.lang.AUTAnnotations.PRIORITY_EXECUTION_FROM_TESTS"/>
+<fullyQualifiedTypeName name="java.lang.Enum"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="javax.swing.JApplet"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="java.util.EnumMap"/>
+<fullyQualifiedTypeName name="TValue"/>
+<fullyQualifiedTypeName name="java.util.Map.Entry"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.AbstractMap"/>
+<fullyQualifiedTypeName name="java.util.AbstractMap.SimpleEntry"/>
+<fullyQualifiedTypeName name="java.lang.AUTAnnotations.TYPE_MEMBER_FROM_CODE"/>
+</qualifiedTypeNameHistroy>

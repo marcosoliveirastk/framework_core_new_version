@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package br.fwk;
+
+import br.fwk.db.connector.sgdb.AUTDBConMySql;
+
+/**
+ * 
+ * @author marcos.oliveira
+ *
+ */
+public class AUTFramework {
+
+	/**
+	 * 
+	 * @param args
+	 * @throws IllegalAccessException 
+	 * @throws InstantiationException 
+	 * 
+	 */
+	public static void main(String[] args) throws InstantiationException, IllegalAccessException {
+		// TODO Auto-generated method stub
+		System.out.println("AUT INIT : PROCESS EXECUTION");
+		java.lang.reflect.Method[] methods = AUTDBConMySql.class.newInstance().getClass().getMethods();
+		for(java.lang.reflect.Method method : methods) {
+			System.out.println(method.getName());
+			System.out.println(method.getParameterCount());
+		}
+	}
+
+}

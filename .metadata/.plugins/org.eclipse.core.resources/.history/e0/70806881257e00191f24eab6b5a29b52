@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package br.fwk.db.connector.sgdb.interfaces;
+
+/**
+ * Interface de conexão para sistemas de gerenciamento de banco de dados
+ * 
+ * @author marcos.oliveira
+ *
+ */
+public interface IAUTSGDBConnections {
+	/**
+	 * 
+	 * Cria uma nova conexão com o banco de dados
+	 * 
+	 * @param host - Host que hospeda o banco de dados
+	 * @param database - Nome do banco de dados
+	 * @param userName - Nome do usuário com acesso ao banco de dados
+	 * @param password - Senha do banco de dados
+	 * @return java.sql.Connection - Objeto de conexão com o banco de dados
+	 * 
+	 */
+	java.sql.Connection getNewConnection(String host,String database,String userName,String password);
+}

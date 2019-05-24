@@ -1,0 +1,61 @@
+/**
+ * 
+ */
+package java.lang;
+
+/**
+ * @author marcos.oliveira
+ *
+ */
+public @interface AUTAnnotations {
+	
+	/**
+	 * Tipo de objeto
+	 * 
+	 * @author marcos.oliveira
+	 *
+	 */
+	public static enum TYPE_MEMBER_FROM_CODE{
+		METHOD_TO_TEST,
+		METHOD_TO_SCENARIO,
+		METHOD_TO_COMPONENT,
+		METHOD_TO_PROJECT,
+		METHOD,
+		VARIABLE,
+		CLASS,
+		BUSINESS_CLASS,
+		BUSINESS_OBJECT,
+		BUSINESS_PARAMS;
+		
+		@Override
+		public String toString() {
+			// TODO Auto-generated method stub
+			
+			switch(this) {
+			case BUSINESS_CLASS:{
+				return "CLASSE DE IMPLEMENTAÇÃO DO NEGÓCIO";
+			}
+			case BUSINESS_OBJECT:{
+				return "OBJETO DE IMPLEMENTAÇÃO DO NEGÓCIO";
+			}
+			case BUSINESS_PARAMS:{
+				return "PARAMETRO DE CONFIGURAÇÃO DO NEGÓCIO";
+			}
+			}
+			return super.toString();
+		}
+	}
+	
+	/**
+	 * 
+	 * Membro para inicialização de parametros da classe local
+	 * 
+	 * @author marcos.oliveira
+	 *
+	 */
+	public static @interface INIT_CLASS{};
+	
+	public static @interface TYPE_MEMBER{
+		TYPE_MEMBER_FROM_CODE MEMBER();
+	}
+}

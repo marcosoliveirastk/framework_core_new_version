@@ -1,0 +1,45 @@
+/**
+ * 
+ */
+package br.fwk.db.connector.sgdb;
+
+import java.lang.annotation.AUTAnnotations;
+import java.lang.annotation.AUTAnnotations.MODULE_DEFINITION;
+import java.lang.annotation.AUTAnnotations.PRIORITY_EXECUTION_FROM_TESTS;
+import java.lang.annotation.AUTAnnotations.PROJECT_DEFINITION;
+import java.lang.annotation.AUTAnnotations.TYPE_MEMBER_FROM_CODE;
+
+@AUTAnnotations.BUSINESS_PROJECT(PROJECT = PROJECT_DEFINITION.PROJECT_SYSTEM_1)
+@AUTAnnotations.BUSINESS_MODULE(MODULE = MODULE_DEFINITION.MODULE_34)
+/**
+ * @author marcos.oliveira
+ *
+ */
+public class AUTDBConMySql {
+	
+	@AUTAnnotations.PRIORITY_TO_PROCESS(PRIORITY = PRIORITY_EXECUTION_FROM_TESTS.PRIORITY_1)
+	@AUTAnnotations.TYPE_MEMBER(MEMBER = TYPE_MEMBER_FROM_CODE.VARIABLE_FRAMEWORK)
+	private String valorUpload = "VALOR PARA UPLOAD DE DADOS - SINCRONIZAÇÃO NO SERVIDOR";
+	
+	@AUTAnnotations.PRIORITY_TO_PROCESS(PRIORITY = PRIORITY_EXECUTION_FROM_TESTS.PRIORITY_1)
+	@AUTAnnotations.INIT_CLASS(VALUE = TYPE_MEMBER_FROM_CODE.METHOD_FRAMEWORK)
+	/**
+	 * 
+	 * Método de inicialização do sistema de gerenciamento de banco de dados para MYSQL
+	 * 
+	 */
+	public void init() {
+		
+	}
+	
+	
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

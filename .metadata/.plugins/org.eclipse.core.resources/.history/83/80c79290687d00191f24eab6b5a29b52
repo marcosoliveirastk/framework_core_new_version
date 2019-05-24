@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package br.fwk;
+
+/**
+ * @author marcos.oliveira
+ *
+ */
+public class AUTFramework {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

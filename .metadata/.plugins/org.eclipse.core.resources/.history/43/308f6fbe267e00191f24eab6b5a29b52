@@ -1,0 +1,5 @@
+package br.fwk.db.connector.logs.interfaces;
+
+public interface IAUTConnectorLogs {
+
+}

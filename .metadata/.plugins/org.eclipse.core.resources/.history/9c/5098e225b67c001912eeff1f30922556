@@ -1,0 +1,28 @@
+/**
+ * 
+ */
+package java.lang;
+
+/**
+ * @author marcos.oliveira
+ *
+ */
+public @interface AUTAnnotations {
+	public static enum TYPE_MEMBER_FROM_CODE{
+		METHOD,
+		VARIABLE,
+		CLASS
+	}
+	/**
+	 * 
+	 * Membro para inicialização de parametros da classe local
+	 * 
+	 * @author marcos.oliveira
+	 *
+	 */
+	public static @interface INIT_CLASS{};
+	
+	public static @interface TYPE_MEMBER{
+		
+	}
+}

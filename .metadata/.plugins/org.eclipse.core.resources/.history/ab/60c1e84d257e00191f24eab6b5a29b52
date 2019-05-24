@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package br.fwk.db.connector.sgdb.interfaces;
+
+/**
+ * @author marcos.oliveira
+ *
+ */
+public interface IAUTSGDBConnections {
+
+}

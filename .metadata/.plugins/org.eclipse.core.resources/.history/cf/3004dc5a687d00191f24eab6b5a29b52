@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package br.fwk.db.connector.sgdb;
+
+import java.lang.AUTAnnotations.PRIORITY_EXECUTION_FROM_TESTS;
+import java.lang.AUTAnnotations.TYPE_MEMBER_CONFIGURATION;
+import java.lang.AUTAnnotations.TYPE_MEMBER_FROM_CODE;
+
+/**
+ * @author marcos.oliveira
+ *
+ */
+public class AUTDBConMySql {
+	@AUTAnnotations.INIT_CLASS
+	public void init() {
+		
+	}
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

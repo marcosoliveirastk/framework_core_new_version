@@ -1,0 +1,82 @@
+/**
+ * 
+ */
+package java.lang;
+
+/**
+ * @author marcos.oliveira
+ *
+ */
+public @interface AUTAnnotations {
+	
+	/**
+	 * Tipo de objeto
+	 * 
+	 * @author marcos.oliveira
+	 *
+	 */
+	public static enum TYPE_MEMBER_FROM_CODE{
+		METHOD_TO_TEST,
+		METHOD_TO_SCENARIO,
+		METHOD_TO_COMPONENT,
+		METHOD_TO_MODULE,
+		METHOD_FRAMEWORK,
+		VARIABLE_FRAMEWORK,
+		CLASS_FRAMEWORK,
+		BUSINESS_CLASS,
+		BUSINESS_OBJECT,
+		BUSINESS_PARAMS;
+		
+		@Override
+		public String toString() {
+			// TODO Auto-generated method stub
+			
+			switch(this) {
+			case BUSINESS_CLASS:{
+				return "CLASSE DE IMPLEMENTAÇÃO DO NEGÓCIO";
+			}
+			case BUSINESS_OBJECT:{
+				return "OBJETO DE IMPLEMENTAÇÃO DO NEGÓCIO";
+			}
+			case BUSINESS_PARAMS:{
+				return "PARAMETRO DE CONFIGURAÇÃO DO NEGÓCIO";
+			}
+			case CLASS_FRAMEWORK:{
+				return "CLASSE DE IMPLEMENTAÇÃO DO FRAMEWORK";
+			}
+			case METHOD_FRAMEWORK:{
+				return "MÉTODO DE IMPLEMENTAÇÃO DO FRAMEWORK";
+			}
+			case METHOD_TO_COMPONENT:{
+				return "METODO DE IMPLEMENTAÇÃO DO COMPONENTE DE NEGÓCIO";
+			}
+			case METHOD_TO_MODULE:{
+				return "MÉTODO DE IMPLEMENTAÇÃO DO PROJETO DE UM MÓDULO DE NEGÓCIO";
+			}
+			case METHOD_TO_SCENARIO:{
+				return "MÉTODO DE IMPLEMENTAÇÃO DO CENÁRIO DE NEGÓCIO";
+			}
+			case METHOD_TO_TEST:{
+				return "MÉTODO DE IMPLEMENTAÇÃO DO TESTE RELACIONADO A ALGUM CENÁRIO DE NEGÓCIO";
+			}
+			case VARIABLE_FRAMEWORK:{
+				return "VARIÁVEL DE IMPLEMENTAÇÃO DO FRAMEWORK";
+			}
+			}
+			return super.toString();
+		}
+	}
+	
+	/**
+	 * 
+	 * Membro para inicialização de parametros da classe local
+	 * 
+	 * @author marcos.oliveira
+	 *
+	 */
+	public static @interface INIT_CLASS{};
+	
+	public static @interface TYPE_MEMBER{
+		TYPE_MEMBER_FROM_CODE MEMBER();
+	}
+}

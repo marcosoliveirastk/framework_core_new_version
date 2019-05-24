@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="method.getAnnotations()"/>\r\n<expression enabled\="true" text\="AUTDBConMySql.class.getAnnotations()"/>\r\n<expression enabled\="true" text\="AUTDBConMySql.class.getDeclaredAnnotations()"/>\r\n<expression enabled\="true" text\="AUTDBConMySql.class.getDeclaredFields()"/>\r\n</watchExpressions>\r\n
