@@ -7,7 +7,7 @@ package br.fwk.db.connector.sgdb;
  * @author marcos.oliveira
  *
  */
-public class AUTDBConJavaDerby {
+public class AUTDBConJavaDerby extends br.fwk.db.connector.AUTSGDBConnections{
 
 	/**
 	 * @param args

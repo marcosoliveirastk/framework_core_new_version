@@ -7,7 +7,7 @@ package br.fwk.db.connector.sgdb;
  * @author marcos.oliveira
  *
  */
-public class AUTDBConOracle {
+public class AUTDBConOracle extends br.fwk.db.connector.AUTSGDBConnections{
 
 	/**
 	 * @param args

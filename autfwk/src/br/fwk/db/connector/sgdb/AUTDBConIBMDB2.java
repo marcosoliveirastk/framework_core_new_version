@@ -7,7 +7,7 @@ package br.fwk.db.connector.sgdb;
  * @author marcos.oliveira
  *
  */
-public class AUTDBConIBMDB2 {
+public class AUTDBConIBMDB2 extends br.fwk.db.connector.AUTSGDBConnections{
 
 	/**
 	 * @param args

@@ -7,7 +7,7 @@ package br.fwk.db.connector.sgdb;
  * @author marcos.oliveira
  *
  */
-public class AUTDBConPostGril {
+public class AUTDBConPostGril extends br.fwk.db.connector.AUTSGDBConnections{
 
 	/**
 	 * @param args

@@ -7,7 +7,7 @@ package br.fwk.db.connector.sgdb;
  * @author marcos.oliveira
  *
  */
-public class AUTDBConFirebird {
+public class AUTDBConFirebird  extends br.fwk.db.connector.AUTSGDBConnections{
 
 	/**
 	 * @param args
