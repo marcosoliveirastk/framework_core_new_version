@@ -11,13 +11,13 @@ import java.util.List;
  *
  */
 public class AUTSGDBConnections implements br.fwk.db.connector.sgdb.interfaces.IAUTSGDBConnections{
-
+	
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
@@ -64,6 +64,12 @@ public class AUTSGDBConnections implements br.fwk.db.connector.sgdb.interfaces.I
 
 	@Override
 	public Connection getActiveConnection() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Connection getNewConnection(String url) {
 		// TODO Auto-generated method stub
 		return null;
 	}

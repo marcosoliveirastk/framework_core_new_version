@@ -12,6 +12,17 @@ import br.fwk.db.connector.logs.interfaces.IAUTConnectorLogs;
  *
  */
 public interface IAUTSGDBConnections extends IAUTConnectorLogs{
+	
+	/**
+	 * 
+	 * Cria uma nova conexão a partir da URL de recursos - String de conexão
+	 * 
+	 * @param url - URL de configuração da conexão - Connection String
+	 * 
+	 * @return java.sql.Connection - Objeto de conexão
+	 * 
+	 */
+	java.sql.Connection getNewConnection(String url);
 	/**
 	 * 
 	 * Cria uma nova conexão com o banco de dados
