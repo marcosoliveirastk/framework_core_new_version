@@ -58,7 +58,6 @@ public class AUTFramework {
 		AUTFramework.class.getClassLoader().loadClass("br.fwk.Teste").newInstance().getClass().getMethod("start", null);
 		System.out.println();
 		
-		br.fwk.db.connector.sgdb.AUTDBConMySql con = new br.fwk.db.connector.sgdb.AUTDBConMySql();
 				
 	}
 
