@@ -3,13 +3,15 @@
  */
 package br.fwk.db.connector.sgdb.interfaces;
 
+import br.fwk.db.connector.logs.interfaces.IAUTConnectorLogs;
+
 /**
  * Interface de conexão para sistemas de gerenciamento de banco de dados
  * 
  * @author marcos.oliveira
  *
  */
-public interface IAUTSGDBConnections {
+public interface IAUTSGDBConnections extends IAUTConnectorLogs{
 	/**
 	 * 
 	 * Cria uma nova conexão com o banco de dados

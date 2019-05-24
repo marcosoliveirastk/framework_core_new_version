@@ -9,6 +9,7 @@ import java.lang.annotation.AUTAnnotations.PRIORITY_EXECUTION_FROM_TESTS;
 import java.lang.annotation.AUTAnnotations.PROJECT_DEFINITION;
 import java.lang.annotation.AUTAnnotations.TYPE_MEMBER_FROM_CODE;
 import java.sql.Connection;
+import java.util.List;
 
 @AUTAnnotations.BUSINESS_PROJECT(PROJECT = PROJECT_DEFINITION.PROJECT_SYSTEM_1)
 @AUTAnnotations.BUSINESS_MODULE(MODULE = MODULE_DEFINITION.MODULE_34)
@@ -16,33 +17,11 @@ import java.sql.Connection;
  * @author marcos.oliveira
  *
  */
-public abstract class AUTDBConMySql implements br.fwk.db.connector.sgdb.interfaces.IAUTSGDBConnections{
+public abstract class AUTDBConMySql extends br.fwk.db.connector.AUTSGDBConnections{
 
-	@Override
-	public Connection getNewConnection(String host, String database, String userName, String password) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Connection getNewConnection() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Connection setConnection(String host, String database, String userName, String password) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Connection getActiveConnection() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
+	public AUTDBConMySql() {
+		
+	}	
 }
 
 

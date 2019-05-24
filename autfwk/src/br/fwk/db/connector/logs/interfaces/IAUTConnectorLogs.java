@@ -24,4 +24,20 @@ public interface IAUTConnectorLogs {
 	 * @return java.util.List - Lista de registros gravados no log de dados do sistema
 	 */
 	java.util.List<Object> readLog();
+	
+	
+	/**
+	 * 
+	 * Procedimento de inicialização do log 
+	 * 
+	 * 
+	 */
+	boolean startProcess();
+	
+	/**
+	 * 
+	 * Procedimento de finalização do log
+	 * 
+	 */
+	boolean endProcess();
 }
