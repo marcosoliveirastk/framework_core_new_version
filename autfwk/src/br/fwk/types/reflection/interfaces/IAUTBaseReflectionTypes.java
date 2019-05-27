@@ -237,6 +237,146 @@ public interface IAUTBaseReflectionTypes {
 			Object valueDefault = null;
 			
 			/**
+			 * @return the regExpToValue
+			 */
+			public String getRegExpToValue() {
+				return regExpToValue;
+			}
+
+			/**
+			 * @param regExpToValue the regExpToValue to set
+			 */
+			public void setRegExpToValue(String regExpToValue) {
+				this.regExpToValue = regExpToValue;
+			}
+
+			/**
+			 * @return the regExpToName
+			 */
+			public String getRegExpToName() {
+				return regExpToName;
+			}
+
+			/**
+			 * @param regExpToName the regExpToName to set
+			 */
+			public void setRegExpToName(String regExpToName) {
+				this.regExpToName = regExpToName;
+			}
+
+			/**
+			 * @return the haveRegExpToName
+			 */
+			public Boolean getHaveRegExpToName() {
+				return haveRegExpToName;
+			}
+
+			/**
+			 * @param haveRegExpToName the haveRegExpToName to set
+			 */
+			public void setHaveRegExpToName(Boolean haveRegExpToName) {
+				this.haveRegExpToName = haveRegExpToName;
+			}
+
+			/**
+			 * @return the haveRegExpToValue
+			 */
+			public Boolean getHaveRegExpToValue() {
+				return haveRegExpToValue;
+			}
+
+			/**
+			 * @param haveRegExpToValue the haveRegExpToValue to set
+			 */
+			public void setHaveRegExpToValue(Boolean haveRegExpToValue) {
+				this.haveRegExpToValue = haveRegExpToValue;
+			}
+
+			/**
+			 * @return the name
+			 */
+			public String getName() {
+				return name;
+			}
+
+			/**
+			 * @param name the name to set
+			 */
+			public void setName(String name) {
+				this.name = name;
+			}
+
+			/**
+			 * @return the classParent
+			 */
+			public String getClassParent() {
+				return classParent;
+			}
+
+			/**
+			 * @param classParent the classParent to set
+			 */
+			public void setClassParent(String classParent) {
+				this.classParent = classParent;
+			}
+
+			/**
+			 * @return the isStatic
+			 */
+			public Boolean getIsStatic() {
+				return isStatic;
+			}
+
+			/**
+			 * @param isStatic the isStatic to set
+			 */
+			public void setIsStatic(Boolean isStatic) {
+				this.isStatic = isStatic;
+			}
+
+			/**
+			 * @return the isInstance
+			 */
+			public Boolean getIsInstance() {
+				return isInstance;
+			}
+
+			/**
+			 * @param isInstance the isInstance to set
+			 */
+			public void setIsInstance(Boolean isInstance) {
+				this.isInstance = isInstance;
+			}
+
+			/**
+			 * @return the valueDefault
+			 */
+			public Object getValueDefault() {
+				return valueDefault;
+			}
+
+			/**
+			 * @param valueDefault the valueDefault to set
+			 */
+			public void setValueDefault(Object valueDefault) {
+				this.valueDefault = valueDefault;
+			}
+
+			/**
+			 * @return the valueCurrent
+			 */
+			public Object getValueCurrent() {
+				return valueCurrent;
+			}
+
+			/**
+			 * @param valueCurrent the valueCurrent to set
+			 */
+			public void setValueCurrent(Object valueCurrent) {
+				this.valueCurrent = valueCurrent;
+			}
+
+			/**
 			 * Valor corrente  - Da instância atual
 			 * 
 			 */
