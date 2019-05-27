@@ -416,6 +416,5 @@ public interface IAUTBaseDataExtractor {
 			this.regExpListClassesParents = regExpListClassesParents;
 		}
 
-	}
-	
+	}	
 }
