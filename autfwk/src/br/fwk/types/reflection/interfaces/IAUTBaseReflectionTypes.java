@@ -3,12 +3,30 @@
  */
 package br.fwk.types.reflection.interfaces;
 
+
 /**
+ * 
+ * Interface e classes relacionadas ao processo de reflexão da estrutura de dados:
+ * 
+ * - Define um conjunto de classes e métodos para reflexão em tempo de execução
+ * - Define subtipos relacionados a definição da estrutura de dados
+ * 
+ * 
  * @author marcos.oliveira
  *
  */
-public interface IAUTBaseDataExtractor {
+public interface IAUTBaseReflectionTypes {
 	public static class AUTClassDefinition{
+		/**
+		 * 
+		 * Lista de métodos da classe atual:
+		 * 
+		 * - Sem filtros por expressão regular
+		 * 
+		 */
+		private static java.util.List<java.util.AbstractMap.SimpleEntry<String, String>> currentListMethods = null;
+		
+		
 		/**
 		 * 
 		 * Define o nomo padrão da classe, capturado em tempo de execução
@@ -128,6 +146,102 @@ public interface IAUTBaseDataExtractor {
 		 * 
 		 */
 		private String regExpListClassesParents = null;
+		
+		
+		/**
+		 * 
+		 * Opções de serviço disponibilizados pela classe local
+		 * 
+		 */
+		public static enum TYPE_SERVICE_OPERATION{
+			/**
+			 * Carrega lista de métodos utilizando o paramentro expressão regular
+			 */
+			LOADER_LIST_METHODS_WITH_REGEXP,
+			LOADER_LIST_METHODS,
+			LOADER_LOCAL_VARIABLES_WITH_REGEXP,
+			LOADER_LOCAL_VARIABLES,
+			LOADER_EXTERN_VARIABLES_WITH_REGEXP			
+		}
+		
+		/**
+		 * 
+		 * Define a classe para reflexão de variáveis
+		 * 
+		 * @author marcos.oliveira
+		 *
+		 */
+		public static class AUTVariables{
+			
+			/**
+			 * 
+			 * Expressão regular associada ao valor da variável
+			 * 
+			 */
+			String regExpToValue = null;
+			
+			/**
+			 * 
+			 * Expressão regular associada ao nome da variável
+			 * 
+			 */
+			String regExpToName = null;
+			
+			/**
+			 *
+			 *Têm expressão regular associada ao nome da variável
+			 * 
+			 */
+			Boolean haveRegExpToName = false;
+			
+			/**
+			 * 
+			 * Têm expressão regular associada ao valor da variável
+			 * 
+			 */
+			Boolean haveRegExpToValue = false;
+			
+			/**
+			 * 
+			 * Nome amigável da variável
+			 * 
+			 */
+			String name = null;
+			
+			/**
+			 * 
+			 * Nome da classe container
+			 * 
+			 */
+			String classParent = null;
+			
+			/**
+			 * 
+			 * É variável estática?
+			 * 
+			 */
+			Boolean isStatic = false;
+			
+			/**
+			 * 
+			 * É uma variável de instância local?
+			 * 
+			 */
+			Boolean isInstance = true;
+			
+			/**
+			 * 
+			 * Valor padrão da variável
+			 * 
+			 */
+			Object valueDefault = null;
+			
+			/**
+			 * Valor corrente  - Da instância atual
+			 * 
+			 */
+			Object valueCurrent = null;			
+		}
 		
 		
 		
@@ -416,5 +530,86 @@ public interface IAUTBaseDataExtractor {
 			this.regExpListClassesParents = regExpListClassesParents;
 		}
 
+		
+		/**
+		 * 
+		 * Retorna a lista de métodos da classe atual:
+		 * 
+		 * - Sem filtros por expressão regular
+		 * 
+		 * @return the currentListMethods
+		 */
+		public static java.util.List<java.util.AbstractMap.SimpleEntry<String, String>> getCurrentListMethods() {
+			return currentListMethods;
+		}
+
+		
+		/**
+		 * 
+		 * Altera a lista de métodos da classe atual:
+		 * 
+		 * - Os métodos carregados não foram filtrados por nenhuma expressão regular
+		 * 
+		 * 
+		 * @param currentListMethods the currentListMethods to set
+		 */
+		public static void setCurrentListMethods(
+				java.util.List<java.util.AbstractMap.SimpleEntry<String, String>> currentListMethods) {
+			AUTClassDefinition.currentListMethods = currentListMethods;
+		}
+		
+		
+		/**
+		 * 
+		 * Carrega a lista de variáveis da classe espefíca
+		 * 
+		 * @param classeTarget - Classe que definição o escopo da declaração de variáveis
+		 * 
+		 * @return java.util.List<Object> - Lista de objetos
+		 * 
+		 */
+		protected static java.util.List<Object> getListVariables(Class<?> classeTarget){
+			java.util.List<Object> list = new java.util.ArrayList<Object>();
+			
+			return null;
+		}
+		/**
+		 * 
+		 * Carrega uma lista específica de acordo com os parametros específicados na chamada do método de configuração:
+		 * 
+		 * - Durante o execução do processo
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * @param <TList> - Tipos de listas genéricas para carregamento
+		 * @param <TOptionService> - Tipos de serviços genéricos para carregamento
+		 * @param listToLoad - Lista para carregamento
+		 * @param optionService - Tipo de serviço para carregamento da lista
+		 * 
+		 * 
+		 * @return boolean - Caso o processo seja finalizado com sucesso, false caso contrário.
+		 */
+		public <TList extends java.util.List,TOptionService extends TYPE_SERVICE_OPERATION> boolean loaderListObject(TList listToLoad,TOptionService optionService) {
+			switch((TYPE_SERVICE_OPERATION)optionService) {
+			case LOADER_EXTERN_VARIABLES_WITH_REGEXP:{				
+				break;
+			}
+			case LOADER_LIST_METHODS:{				
+				break;
+			}
+			case LOADER_LIST_METHODS_WITH_REGEXP:{				
+				break;
+			}
+			case LOADER_LOCAL_VARIABLES:{				
+				break;
+			}
+			case LOADER_LOCAL_VARIABLES_WITH_REGEXP:{				
+				break;
+			}
+			}
+			return true;
+		}
 	}	
 }

@@ -1,8 +1,7 @@
 /**
  * 
  */
-package java.lang.annotation;
-
+package br.fwk.annotation;
 import java.util.AbstractMap.SimpleEntry;
 import java.util.Map.Entry;
 
