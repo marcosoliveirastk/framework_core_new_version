@@ -23,7 +23,7 @@ public class AUTAPI{
 	 * Path associada ao arquivo de log local
 	 * 
 	 */
-	private java.nio.file.Path pathLogFile = null;
+	private static java.nio.file.Path pathLogFile = null;
 	
 	
 	/**
@@ -191,6 +191,21 @@ public class AUTAPI{
 	
 	
 	/**
+	 * @return the pathLogFile
+	 */
+	public static java.nio.file.Path getPathLogFile() {
+		return pathLogFile;
+	}
+
+	/**
+	 * @param pathLogFile the pathLogFile to set
+	 */
+	public static void setPathLogFile(java.nio.file.Path path) {
+		pathLogFile = path;
+	}
+
+	
+	/**
 	 * 
 	 * Verifica a correspondência de uma uma expressão regular em um conteúdo específico
 	 * 
@@ -322,18 +337,23 @@ public class AUTAPI{
 	 * @throws IOException 
 	 * 
 	 */
-	public static String startLogLocalWithDefaultConfiguration() throws IOException {
+	public static String startLogFileServerDefault() throws IOException {
 		java.nio.file.Path pth = java.nio.file.Paths.get(OPTIONS_MACHINE_CONFIGURATION.DIRECTORY_LOG_LOCAL.toString());
-	
 		if(java.nio.file.Files.exists(pth, java.nio.file.LinkOption.NOFOLLOW_LINKS)) {
-			
+			if(getPathLogFile()==null) {
+				setPathLogFile(java.nio.file.Files.createFile(pth));
+			}
+			else {
+				if(getPathLogFile().getFileName()!=pth.getFileName()) {
+					setPathLogFile(java.nio.file.Files.createFile(pth));
+				}
+			}
+		}
+		else {
+			setPathLogFile(java.nio.file.Files.createFile(pth));
 		}
 		
-		java.nio.file.Path pathLogFile = java.nio.file.Files.createFile(java.nio.file.Paths.get(OPTIONS_MACHINE_CONFIGURATION.DIRECTORY_LOG_LOCAL.toString()));
-		
-		
-		
-		return "";
+		return getPathLogFile().toString();
 	}
 	
 	
@@ -379,6 +399,7 @@ public class AUTAPI{
 		AUTAPI.portLogInNetworkTCPIP = portLogInNetworkTCPIP;
 	}
 
+
 	/**
 	 * 
 	 * Método main de inicialização para testes locais
@@ -388,7 +409,14 @@ public class AUTAPI{
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		try {
+			System.out.println(startLogFileServerDefault());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.out.println("ERROR CREATE DEFAULT LOG LOCAL");
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
 	}
 
 }
