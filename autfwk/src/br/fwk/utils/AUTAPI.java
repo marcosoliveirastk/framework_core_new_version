@@ -37,6 +37,7 @@ public class AUTAPI{
 		
 		/**
 		 * Caminho do arquivo local para direcionamento das mensagens de log
+		 * 
 		 * do sistema.
 		 * 
 		 */
